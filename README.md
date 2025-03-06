@@ -1,12 +1,35 @@
-# React + Vite
+# Learner List - React App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple React app that displays a list of learners, their bios, and their scores. The app dynamically renders components based on provided data.
 
-Currently, two official plugins are available:
+## Features
+- Uses React state to manage learner data.
+- Dynamically renders learners and their scores.
+- Organized into modular components (`App`, `Learner`, and `Score`).
+- Basic styling support via `App.css`.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Structure
+learner-list/
+├── src/
+│   ├── components/
+│   │   ├── Learner.jsx   # Displays learner name, bio, and scores
+│   │   ├── Score.jsx     # Displays individual scores
+│   ├── App.jsx           # Main component, holds state and renders Learner components
+│   ├── App.css           # Global styles for the app
+│   ├── index.js          # Entry point for the React app
+├── public/
+│   ├── index.html        # Root HTML file
+├── package.json          # Project dependencies and scripts
+├── README.md             # Project documentation
 
-## Expanding the ESLint configuration
+## How It Works
+### App.jsx:
+Stores the list of learners in state.
+Loops through learners and renders <Learner> components.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Learner.jsx:
+Displays the name and bio of each learner.
+Loops through their scores and renders <Score> components.
+
+### Score.jsx:
+Displays each score’s date and value.
