@@ -1,4 +1,9 @@
+import React, { useState } from "react"; 
+import './App.css';
+import Learner from "./components/Learner";
+
 function App() {
+  // Store learner data in state
   const [learnerData] = useState({
     learners: [
       {
@@ -34,7 +39,15 @@ function App() {
 
   return (
     <div>
-
+      <h1>Learner List</h1>
+      {/* Loop through learners and create a Learner component for each */}
+      {learnerData.learners.map((learner, index) => (
+        <Learner 
+        key={index}
+        name={learner.name}
+        bio={learner.bio}
+        scores={learner.scores}/>
+      ))}
     </div>
   )
 }

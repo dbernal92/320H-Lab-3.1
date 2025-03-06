@@ -1,0 +1,11 @@
+#root {
+    max-width: 800px;
+    margin: auto;
+    padding: 3rem;
+    background-color: rgb(243, 188, 188);
+  }
+  
+  h1 {
+    text-align: center;
+    text-decoration-line: underline;
+  }
